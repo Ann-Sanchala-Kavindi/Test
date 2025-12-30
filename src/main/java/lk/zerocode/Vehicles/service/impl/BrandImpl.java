@@ -9,6 +9,8 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 
 @Service
 @Component
@@ -37,6 +39,30 @@ public class BrandImpl implements BrandService {
         //brandRepository.deleteById();
 
     }
+
+    @Override
+    public void findById(Long id) {
+
+
+
+        Optional<Brand> brandoptional = brandRepository.findById(id);
+
+        if(brandoptional.isPresent()){
+
+            Brand brand=brandoptional.get();
+            System.out.println(brand.getName());
+
+
+
+        }
+
+
+
+
+    }
+
+
+
 
 
 }
