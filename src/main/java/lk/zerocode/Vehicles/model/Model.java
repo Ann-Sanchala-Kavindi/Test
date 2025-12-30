@@ -17,8 +17,8 @@ public class Model {
     private String name;
     private String modelId;
 
-    @ManyToOne
-    private Type type;
+//    @ManyToOne
+//    private Type type;
 
     @OneToMany(mappedBy = "model")
     private List<Vehicle> vehicleList;

@@ -1,4 +1,8 @@
-//package lk.zerocode.Vehicles.controller;
-//
-//public class ModelController {
-//}
+package lk.zerocode.Vehicles.controller;
+
+public class ModelController {
+
+
+
+
+}

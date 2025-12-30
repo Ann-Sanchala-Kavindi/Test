@@ -5,9 +5,7 @@ import lk.zerocode.Vehicles.controller.request.BrandRequest;
 import lk.zerocode.Vehicles.service.BrandService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class BrandController {
@@ -26,6 +24,16 @@ public class BrandController {
 
         //pass to service
         brandService.create(brandRequest);
+
+    }
+
+    @GetMapping(value="/brands/{brand-id}")
+    public void getById(@PathVariable ("brand-id") Long id){
+
+        //System.out.println("Brand Id"+id);
+
+        brandService.findById(id);
+
 
     }
 
